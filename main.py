@@ -3,7 +3,7 @@ from Jugador import jugador
 
 # fem un bingo, amo ayá
 
-BOLETES_LIST = []
+BOLETES_LIST = [] # No és una constant, hauria d'estar en minúscula i enganxada a la resta del codi
 
 def TreureBoleta(): # treiem boleta i mirem si ja ha sortit o no:
 
@@ -15,9 +15,10 @@ def TreureBoleta(): # treiem boleta i mirem si ja ha sortit o no:
 
         if boleta not in BOLETES_LIST:
             BOLETES_LIST.append(boleta)
-            break
+            break # Elimina els break de la teva vida i sigues feliç (i millor programadora) :)
+            # Intenta que el while funcioni bé jugant només amb boleta_valida, res de break ni continue.
 
-        else:
+        else: # Aquest else no fa res i es pot treure
             pass
         
     print(f"ha sortit el número {boleta}")
@@ -30,7 +31,7 @@ Jugador_1 = jugador("Bonico del tó")
 Jugador_2 = jugador("Ratzinger")
 
 # les fico en una llista per poder iterar amb loops, because why not:
-JUGADORS = [Jugador_1, Jugador_2]
+JUGADORS = [Jugador_1, Jugador_2] # Bona idea posar els jugadors en una llista
 
 final_joc = None
 
@@ -41,7 +42,8 @@ for player in JUGADORS:
 
 while final_joc != "BINGO!": # grans temptacions de fer while True i sortir quan toqui amb break,
                              # però entenc que és més readable amb variables?
-     
+                            # Cada cop que fas break Déu mata un gatet :(
+     # Fins aquí he tingut temps de mirar hahaha
     input("apreta qualsevol tecla per treure una altra boleta ^^\n") # m'ho poso així per tenir una mínima pausa jiji
     
     new_boleta = TreureBoleta() # CREC que així ta guai, però no sé
